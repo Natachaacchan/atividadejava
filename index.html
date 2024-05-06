@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades JavaScript</title>
+</head>
+<body>
+    <h1>Atividades JavaScript</h1>
+
+    <!-- (1) Mensagem de 'Olá Mundo' -->
+    <p id="helloWorld"></p>
+
+    <!-- (2) Saída de soma de 2 inteiros -->
+    <p>A soma de 5 e 3 é: <span id="soma"></span></p>
+
+    <!-- (3) Alterar a propriedade de um elemento por id -->
+    <p id="changeById">Este texto pode ser alterado por ID</p>
+
+    <!-- (4) Alterar a propriedade de um elemento por name -->
+    <input type="text" name="changeByName" value="Este valor pode ser alterado por Name">
+
+    <!-- (5) Alterar a propriedade de um elemento por class -->
+    <p class="changeByClass">Este texto pode ser alterado por Class</p>
+
+    <script>
+        // (1) Mensagem de 'Olá Mundo'
+        document.getElementById('helloWorld').innerText = 'Olá Mundo';
+
+        // (2) Saída de soma de 2 inteiros
+        var soma = 5 + 3;
+        document.getElementById('soma').innerText = soma;
+
+        // (3) Alterar a propriedade de um elemento por id
+        document.getElementById('changeById').innerText = 'Texto alterado por ID';
+
+        // (4) Alterar a propriedade de um elemento por name
+        var elementsByName = document.getElementsByName('changeByName');
+        elementsByName[0].value = 'Novo valor alterado por Name';
+
+        // (5) Alterar a propriedade de um elemento por class
+        var elementsByClass = document.getElementsByClassName('changeByClass');
+        for (var i = 0; i < elementsByClass.length; i++) {
+            elementsByClass[i].innerText = 'Novo texto alterado por Class';
+        }
+    </script>
+</body>
+</html>
